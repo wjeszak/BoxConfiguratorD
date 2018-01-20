@@ -196,6 +196,9 @@ namespace BoxConfigurator
                 case 2:
                     str_type = "led (2)";
                     break;
+                default:
+                    str_type = "no stamp!";
+                    break;
             }
             label_type.Text = str_type;
             label_address.Text = data[(int)Frame.Address].ToString();
