@@ -63,6 +63,8 @@
             this.label_sn = new System.Windows.Forms.Label();
             this.checkBox_inc = new System.Windows.Forms.CheckBox();
             this.richTextBox_log = new System.Windows.Forms.RichTextBox();
+            this.checkBox_mod = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_mod = new System.Windows.Forms.NumericUpDown();
             this.statusStrip.SuspendLayout();
             this.splitContainer_main.Panel1.SuspendLayout();
             this.splitContainer_main.Panel2.SuspendLayout();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_week)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_mod)).BeginInit();
             this.SuspendLayout();
             // 
             // button_connection
@@ -160,6 +163,8 @@
             // splitContainer_write_read.Panel1
             // 
             this.splitContainer_write_read.Panel1.BackColor = System.Drawing.Color.LightGray;
+            this.splitContainer_write_read.Panel1.Controls.Add(this.numericUpDown_mod);
+            this.splitContainer_write_read.Panel1.Controls.Add(this.checkBox_mod);
             this.splitContainer_write_read.Panel1.Controls.Add(this.checkBox_inc);
             this.splitContainer_write_read.Panel1.Controls.Add(this.button_write);
             this.splitContainer_write_read.Panel1.Controls.Add(this.numericUpDown_sn);
@@ -260,7 +265,12 @@
             // 
             // comboBox_type
             // 
+            this.comboBox_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_type.FormattingEnabled = true;
+            this.comboBox_type.Items.AddRange(new object[] {
+            "master (0)",
+            "door (1)",
+            "led (2)"});
             this.comboBox_type.Location = new System.Drawing.Point(115, 40);
             this.comboBox_type.Name = "comboBox_type";
             this.comboBox_type.Size = new System.Drawing.Size(81, 21);
@@ -357,6 +367,7 @@
             this.button_write.TabIndex = 12;
             this.button_write.Text = "Write";
             this.button_write.UseVisualStyleBackColor = true;
+            this.button_write.Click += new System.EventHandler(this.button_write_Click);
             // 
             // label8
             // 
@@ -478,6 +489,38 @@
             this.richTextBox_log.TabIndex = 1;
             this.richTextBox_log.Text = "";
             // 
+            // checkBox_mod
+            // 
+            this.checkBox_mod.AutoSize = true;
+            this.checkBox_mod.Location = new System.Drawing.Point(101, 185);
+            this.checkBox_mod.Name = "checkBox_mod";
+            this.checkBox_mod.Size = new System.Drawing.Size(50, 17);
+            this.checkBox_mod.TabIndex = 14;
+            this.checkBox_mod.Text = "Mod";
+            this.checkBox_mod.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown_mod
+            // 
+            this.numericUpDown_mod.Location = new System.Drawing.Point(157, 180);
+            this.numericUpDown_mod.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown_mod.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_mod.Name = "numericUpDown_mod";
+            this.numericUpDown_mod.Size = new System.Drawing.Size(39, 22);
+            this.numericUpDown_mod.TabIndex = 15;
+            this.numericUpDown_mod.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,6 +545,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_week)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_mod)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,6 +586,8 @@
         private System.Windows.Forms.Label label_type;
         private System.Windows.Forms.CheckBox checkBox_inc;
         private System.Windows.Forms.RichTextBox richTextBox_log;
+        private System.Windows.Forms.CheckBox checkBox_mod;
+        private System.Windows.Forms.NumericUpDown numericUpDown_mod;
     }
 }
 

@@ -62,7 +62,7 @@ namespace BoxConfigurator
             string f_preview = null;
             for(int i = 0; i < len; i++)
             {
-                f_preview += "[" + f[i].ToString("X2") + "]";
+                f_preview += "[" + f[i].ToString() + "]";
             }
             f_preview = ">" + f_preview + "\r\n";
             richTextBox_log.AppendText(f_preview);
@@ -99,6 +99,7 @@ namespace BoxConfigurator
         public MainForm()
         {
             InitializeComponent();
+            comboBox_type.SelectedIndex = 1;
             checkBox_inc.Checked = true;
             GetPorts();
         }
@@ -132,15 +133,15 @@ namespace BoxConfigurator
         private void button_read_Click(object sender, EventArgs e)
         {
             byte[] frame = new byte[9];
-            frame[(int)Frame.Command] = 0x01;
-            frame[(int)Frame.TypeOfHardware] = 0x02;
-            frame[(int)Frame.Address] = 0x05;
-            frame[(int)Frame.Year] = 0x18;
-            frame[(int)Frame.Week] = 0x03;
-            frame[(int)Frame.SnHi] = 0x05;
-            frame[(int)Frame.SnLo] = 0x09;
+            frame[(int)Frame.Command] = 1;
+            frame[(int)Frame.TypeOfHardware] = 0;
+            frame[(int)Frame.Address] = 0;
+            frame[(int)Frame.Year] = 0;
+            frame[(int)Frame.Week] = 0;
+            frame[(int)Frame.SnHi] = 0;
+            frame[(int)Frame.SnLo] = 0;
             frame[(int)Frame.Crc] = CRC8(frame, 7);
-            frame[(int)Frame.End] = 0x0A;
+            frame[(int)Frame.End] = 10;
             SendToPort(frame, 9);
         }
 
@@ -172,13 +173,44 @@ namespace BoxConfigurator
             string f_preview = null;
             for (int i = 0; i < 9; i++)
             {
-                f_preview += "[" + f[i].ToString("X2") + "]";
+                f_preview += "[" + f[i].ToString() + "]";
             }
             f_preview = "<" + f_preview + "\r\n";
             richTextBox_log.AppendText(f_preview);
             richTextBox_log.ScrollToCaret();
-            //                    door_status.ForeColor = Color.Green;
-           // 
+            FillFields(f);
+        }
+
+        private void FillFields(byte[] data)
+        {
+            label_type.Text = data[(int)Frame.TypeOfHardware].ToString();
+            label_address.Text = data[(int)Frame.Address].ToString();
+            label_year.Text = data[(int)Frame.Year].ToString();
+            label_week.Text = data[(int)Frame.Week].ToString();
+            int sn = (data[(int)Frame.SnHi] << 8) | (data[(int)Frame.SnLo] & 0xFF);
+            label_sn.Text = sn.ToString();
+        }
+
+        private void button_write_Click(object sender, EventArgs e)
+        {
+            byte[] frame = new byte[9];
+            frame[(int)Frame.Command] = 2;
+            frame[(int)Frame.TypeOfHardware] = (byte)comboBox_type.SelectedIndex;
+            frame[(int)Frame.Address] = (byte)numericUpDown_address.Value;
+            frame[(int)Frame.Year] = (byte)numericUpDown_year.Value;
+            frame[(int)Frame.Week] = (byte)numericUpDown_week.Value;
+            frame[(int)Frame.SnHi] = (byte)((int)numericUpDown_sn.Value >> 8);
+            frame[(int)Frame.SnLo] = (byte)((int)numericUpDown_sn.Value & 0xFF);
+            frame[(int)Frame.Crc] = CRC8(frame, 7);
+            frame[(int)Frame.End] = 10;
+            SendToPort(frame, 9);
+            if (checkBox_inc.Checked == true)
+            {
+                numericUpDown_address.Value++;
+                numericUpDown_sn.Value++;
+            }
+            if (checkBox_mod.Checked == true && numericUpDown_address.Value % (numericUpDown_mod.Value + 1) == 0)
+                numericUpDown_address.Value = 1;
         }
     }
 }
