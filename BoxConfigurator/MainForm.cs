@@ -183,7 +183,21 @@ namespace BoxConfigurator
 
         private void FillFields(byte[] data)
         {
-            label_type.Text = data[(int)Frame.TypeOfHardware].ToString();
+            byte type = data[(int)Frame.TypeOfHardware];
+            string str_type = null;
+            switch (type)
+            {
+                case 0:
+                    str_type = "master (0)";
+                    break;
+                case 1:
+                    str_type = "door (1)";
+                    break;
+                case 2:
+                    str_type = "led (2)";
+                    break;
+            }
+            label_type.Text = str_type;
             label_address.Text = data[(int)Frame.Address].ToString();
             label_year.Text = data[(int)Frame.Year].ToString();
             label_week.Text = data[(int)Frame.Week].ToString();
