@@ -12,6 +12,13 @@ namespace BoxConfigurator
     public partial class MainForm : Form
     {
         enum PortStatus { Connected, Disconnected, Busy };
+        enum Frame { Command, TypeOfHardware, Address, Year, Week, SnHi, SnLo, Crc, End };
+        // C++ style "function pointer"
+        delegate void SetTextCallback(byte[] f);
+        int desired_data = 9;
+        int received_data = 0;
+        int position = 0;
+        byte[] rxbytearray = new byte[9];
 
         private void GetPorts()
         {
@@ -51,18 +58,20 @@ namespace BoxConfigurator
 
         private void SendToPort(byte[] f, int len)
         {
-            textBox_log.ForeColor = Color.Blue;
+            richTextBox_log.SelectionColor = Color.Blue;
             string f_preview = null;
             for(int i = 0; i < len; i++)
             {
-                f_preview += f[i].ToString("X2");
+                f_preview += "[" + f[i].ToString("X2") + "]";
             }
             f_preview = ">" + f_preview + "\r\n";
-            textBox_log.AppendText(f_preview);
-            textBox_log.ScrollToCaret();
+            richTextBox_log.AppendText(f_preview);
+            richTextBox_log.ScrollToCaret();
             serial.Write(f, 0, len);
+            
             //queries++;
-           // label_queries.Text = queries.ToString();
+            // label_queries.Text = queries.ToString();
+
         }
 
         private byte CRC8(byte[] frame, byte len)
@@ -122,11 +131,54 @@ namespace BoxConfigurator
 
         private void button_read_Click(object sender, EventArgs e)
         {
-            byte[] frame = new byte[10];
-            frame[0] = 0xFF;
-            frame[1] = 1;
-            frame[2] = 5;
-            SendToPort(frame, 3);
+            byte[] frame = new byte[9];
+            frame[(int)Frame.Command] = 0x01;
+            frame[(int)Frame.TypeOfHardware] = 0x02;
+            frame[(int)Frame.Address] = 0x05;
+            frame[(int)Frame.Year] = 0x18;
+            frame[(int)Frame.Week] = 0x03;
+            frame[(int)Frame.SnHi] = 0x05;
+            frame[(int)Frame.SnLo] = 0x09;
+            frame[(int)Frame.Crc] = CRC8(frame, 7);
+            frame[(int)Frame.End] = 0x0A;
+            SendToPort(frame, 9);
+        }
+
+        private void serial_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            int numbytes = serial.BytesToRead;
+
+            received_data += numbytes;
+            if (received_data <= desired_data)
+            {
+                for (int i = position; i < received_data; i++)
+                {
+                    rxbytearray[i] = (byte)serial.ReadByte();
+                }
+                position += numbytes;
+            }
+
+            if (received_data == desired_data)
+            {
+                received_data = 0;
+                position = 0;
+                this.BeginInvoke(new SetTextCallback(SetText), new object[] { rxbytearray });
+            }
+        }
+
+        private void SetText(byte[] f)
+        {
+            richTextBox_log.SelectionColor = Color.Green;
+            string f_preview = null;
+            for (int i = 0; i < 9; i++)
+            {
+                f_preview += "[" + f[i].ToString("X2") + "]";
+            }
+            f_preview = "<" + f_preview + "\r\n";
+            richTextBox_log.AppendText(f_preview);
+            richTextBox_log.ScrollToCaret();
+            //                    door_status.ForeColor = Color.Green;
+           // 
         }
     }
 }

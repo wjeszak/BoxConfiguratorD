@@ -61,8 +61,8 @@
             this.label_year = new System.Windows.Forms.Label();
             this.label_week = new System.Windows.Forms.Label();
             this.label_sn = new System.Windows.Forms.Label();
-            this.textBox_log = new System.Windows.Forms.TextBox();
             this.checkBox_inc = new System.Windows.Forms.CheckBox();
+            this.richTextBox_log = new System.Windows.Forms.RichTextBox();
             this.statusStrip.SuspendLayout();
             this.splitContainer_main.Panel1.SuspendLayout();
             this.splitContainer_main.Panel2.SuspendLayout();
@@ -126,6 +126,8 @@
             // serial
             // 
             this.serial.BaudRate = 19200;
+            this.serial.PortName = "COM6";
+            this.serial.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serial_DataReceived);
             // 
             // splitContainer_main
             // 
@@ -143,7 +145,7 @@
             // 
             // splitContainer_main.Panel2
             // 
-            this.splitContainer_main.Panel2.Controls.Add(this.textBox_log);
+            this.splitContainer_main.Panel2.Controls.Add(this.richTextBox_log);
             this.splitContainer_main.Panel2.Controls.Add(this.splitContainer_write_read);
             this.splitContainer_main.Size = new System.Drawing.Size(438, 402);
             this.splitContainer_main.SplitterDistance = 48;
@@ -456,15 +458,6 @@
             this.label_sn.TabIndex = 18;
             this.label_sn.Text = "----";
             // 
-            // textBox_log
-            // 
-            this.textBox_log.Location = new System.Drawing.Point(3, 254);
-            this.textBox_log.Multiline = true;
-            this.textBox_log.Name = "textBox_log";
-            this.textBox_log.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_log.Size = new System.Drawing.Size(428, 78);
-            this.textBox_log.TabIndex = 1;
-            // 
             // checkBox_inc
             // 
             this.checkBox_inc.AutoSize = true;
@@ -474,6 +467,16 @@
             this.checkBox_inc.TabIndex = 13;
             this.checkBox_inc.Text = "Increment";
             this.checkBox_inc.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox_log
+            // 
+            this.richTextBox_log.Location = new System.Drawing.Point(3, 251);
+            this.richTextBox_log.Name = "richTextBox_log";
+            this.richTextBox_log.ReadOnly = true;
+            this.richTextBox_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_log.Size = new System.Drawing.Size(428, 96);
+            this.richTextBox_log.TabIndex = 1;
+            this.richTextBox_log.Text = "";
             // 
             // MainForm
             // 
@@ -489,7 +492,6 @@
             this.statusStrip.PerformLayout();
             this.splitContainer_main.Panel1.ResumeLayout(false);
             this.splitContainer_main.Panel2.ResumeLayout(false);
-            this.splitContainer_main.Panel2.PerformLayout();
             this.splitContainer_main.ResumeLayout(false);
             this.splitContainer_write_read.Panel1.ResumeLayout(false);
             this.splitContainer_write_read.Panel1.PerformLayout();
@@ -538,8 +540,8 @@
         private System.Windows.Forms.Label label_year;
         private System.Windows.Forms.Label label_address;
         private System.Windows.Forms.Label label_type;
-        private System.Windows.Forms.TextBox textBox_log;
         private System.Windows.Forms.CheckBox checkBox_inc;
+        private System.Windows.Forms.RichTextBox richTextBox_log;
     }
 }
 
