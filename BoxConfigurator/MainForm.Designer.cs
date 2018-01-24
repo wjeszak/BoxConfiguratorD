@@ -74,6 +74,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label_hex_name = new System.Windows.Forms.Label();
             this.button_browse = new System.Windows.Forms.Button();
+            this.textBox_hex_preview = new System.Windows.Forms.TextBox();
+            this.button_info = new System.Windows.Forms.Button();
+            this.button_write_hex = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label_time_elapsed = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.splitContainer_main.Panel1.SuspendLayout();
             this.splitContainer_main.Panel2.SuspendLayout();
@@ -602,6 +607,11 @@
             // panel_flash
             // 
             this.panel_flash.BackColor = System.Drawing.Color.Red;
+            this.panel_flash.Controls.Add(this.label_time_elapsed);
+            this.panel_flash.Controls.Add(this.label14);
+            this.panel_flash.Controls.Add(this.button_write_hex);
+            this.panel_flash.Controls.Add(this.button_info);
+            this.panel_flash.Controls.Add(this.textBox_hex_preview);
             this.panel_flash.Controls.Add(this.button_browse);
             this.panel_flash.Controls.Add(this.label_hex_name);
             this.panel_flash.Controls.Add(this.label13);
@@ -639,6 +649,54 @@
             this.button_browse.Text = "...";
             this.button_browse.UseVisualStyleBackColor = true;
             this.button_browse.Click += new System.EventHandler(this.button_browse_Click);
+            // 
+            // textBox_hex_preview
+            // 
+            this.textBox_hex_preview.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_hex_preview.Location = new System.Drawing.Point(6, 35);
+            this.textBox_hex_preview.Multiline = true;
+            this.textBox_hex_preview.Name = "textBox_hex_preview";
+            this.textBox_hex_preview.ReadOnly = true;
+            this.textBox_hex_preview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_hex_preview.Size = new System.Drawing.Size(428, 171);
+            this.textBox_hex_preview.TabIndex = 3;
+            // 
+            // button_info
+            // 
+            this.button_info.Location = new System.Drawing.Point(359, 212);
+            this.button_info.Name = "button_info";
+            this.button_info.Size = new System.Drawing.Size(75, 23);
+            this.button_info.TabIndex = 4;
+            this.button_info.Text = "Info";
+            this.button_info.UseVisualStyleBackColor = true;
+            // 
+            // button_write_hex
+            // 
+            this.button_write_hex.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_write_hex.Location = new System.Drawing.Point(6, 212);
+            this.button_write_hex.Name = "button_write_hex";
+            this.button_write_hex.Size = new System.Drawing.Size(347, 23);
+            this.button_write_hex.TabIndex = 5;
+            this.button_write_hex.Text = "Write hex to microcontroller";
+            this.button_write_hex.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(7, 242);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(76, 13);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Time elapsed:";
+            // 
+            // label_time_elapsed
+            // 
+            this.label_time_elapsed.AutoSize = true;
+            this.label_time_elapsed.Location = new System.Drawing.Point(89, 242);
+            this.label_time_elapsed.Name = "label_time_elapsed";
+            this.label_time_elapsed.Size = new System.Drawing.Size(23, 13);
+            this.label_time_elapsed.TabIndex = 7;
+            this.label_time_elapsed.Text = "----";
             // 
             // MainForm
             // 
@@ -723,6 +781,11 @@
         private System.Windows.Forms.Button button_browse;
         private System.Windows.Forms.Label label_hex_name;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button_write_hex;
+        private System.Windows.Forms.Button button_info;
+        private System.Windows.Forms.TextBox textBox_hex_preview;
+        private System.Windows.Forms.Label label_time_elapsed;
+        private System.Windows.Forms.Label label14;
     }
 }
 

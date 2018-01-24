@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.IO.Ports;
+using System.IO;
 using System.Windows.Forms;
 
 namespace BoxConfigurator
@@ -251,6 +252,13 @@ namespace BoxConfigurator
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 label_hex_name.Text = openFileDialog1.FileName;
+                StreamReader reader = new StreamReader(openFileDialog1.FileName);
+                string line;
+                while((line = reader.ReadLine()) != null)
+                {
+                    textBox_hex_preview.AppendText(line);
+                    textBox_hex_preview.AppendText("\r\n");
+                }
             }
         }
     }
