@@ -252,6 +252,7 @@ namespace BoxConfigurator
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 label_hex_name.Text = openFileDialog1.FileName;
+                textBox_hex_preview.Clear();
                 StreamReader reader = new StreamReader(openFileDialog1.FileName);
                 string line;
                 while((line = reader.ReadLine()) != null)

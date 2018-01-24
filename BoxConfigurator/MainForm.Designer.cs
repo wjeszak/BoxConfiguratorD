@@ -625,6 +625,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(41, 11);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 13);
@@ -634,6 +635,7 @@
             // label_hex_name
             // 
             this.label_hex_name.AutoSize = true;
+            this.label_hex_name.ForeColor = System.Drawing.Color.White;
             this.label_hex_name.Location = new System.Drawing.Point(89, 11);
             this.label_hex_name.Name = "label_hex_name";
             this.label_hex_name.Size = new System.Drawing.Size(23, 13);
