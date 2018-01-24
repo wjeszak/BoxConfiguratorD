@@ -41,13 +41,13 @@ namespace BoxConfigurator
                 case PortStatus.Connected:
                     button_connection.Text = "Disconnect";
                     statusStrip_connection.Text = "Connected @ " + comboBox_baudrate.SelectedItem.ToString() + " bps";
-                    splitContainer_write_read.Enabled = true;
+                    tabControl.Enabled = true;
                     break;
 
                 case PortStatus.Disconnected:
                     button_connection.Text = "Connect";
                     statusStrip_connection.Text = "Disconected";
-                    splitContainer_write_read.Enabled = false;
+                    tabControl.Enabled = false;
                     break;
                 case PortStatus.Busy:
                     button_connection.Text = "Connect";
@@ -228,6 +228,30 @@ namespace BoxConfigurator
             }
             if (checkBox_mod.Checked == true && numericUpDown_address.Value % (numericUpDown_mod.Value + 1) == 0)
                 numericUpDown_address.Value = 1;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button_browse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = @"C:\";
+            openFileDialog1.Title = "Browse hex files";
+            openFileDialog1.CheckFileExists = true;
+            openFileDialog1.CheckPathExists = true;
+            openFileDialog1.DefaultExt = "hex";
+            openFileDialog1.Filter = "Hex files (*.hex)|*.hex|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.ReadOnlyChecked = true;
+            openFileDialog1.ShowReadOnly = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                label_hex_name.Text = openFileDialog1.FileName;
+            }
         }
     }
 }
