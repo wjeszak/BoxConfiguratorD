@@ -48,7 +48,7 @@ namespace BoxConfigurator
                 case PortStatus.Disconnected:
                     button_connection.Text = "Connect";
                     statusStrip_connection.Text = "Disconected";
-                    tabControl.Enabled = false;
+                    //tabControl.Enabled = false;
                     break;
                 case PortStatus.Busy:
                     button_connection.Text = "Connect";

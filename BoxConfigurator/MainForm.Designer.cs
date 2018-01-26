@@ -36,65 +36,76 @@
             this.statusStrip_connection = new System.Windows.Forms.ToolStripStatusLabel();
             this.serial = new System.IO.Ports.SerialPort(this.components);
             this.splitContainer_main = new System.Windows.Forms.SplitContainer();
-            this.richTextBox_log = new System.Windows.Forms.RichTextBox();
-            this.numericUpDown_mod = new System.Windows.Forms.NumericUpDown();
-            this.checkBox_mod = new System.Windows.Forms.CheckBox();
-            this.checkBox_inc = new System.Windows.Forms.CheckBox();
-            this.button_write = new System.Windows.Forms.Button();
-            this.numericUpDown_sn = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_week = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_year = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_address = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_type = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label_sn = new System.Windows.Forms.Label();
-            this.label_week = new System.Windows.Forms.Label();
-            this.label_year = new System.Windows.Forms.Label();
-            this.label_address = new System.Windows.Forms.Label();
-            this.label_type = new System.Windows.Forms.Label();
-            this.button_read = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel_write_stamp = new System.Windows.Forms.Panel();
-            this.panel_read_stamp = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_eeprom = new System.Windows.Forms.TabPage();
+            this.panel_write_stamp = new System.Windows.Forms.Panel();
+            this.numericUpDown_mod = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkBox_mod = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBox_inc = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button_write = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown_sn = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown_week = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown_year = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_type = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_address = new System.Windows.Forms.NumericUpDown();
+            this.panel_read_stamp = new System.Windows.Forms.Panel();
+            this.label_sn = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label_week = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_year = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label_address = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label_type = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button_read = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPage_flash = new System.Windows.Forms.TabPage();
             this.panel_flash = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label_hex_name = new System.Windows.Forms.Label();
-            this.button_browse = new System.Windows.Forms.Button();
-            this.textBox_hex_preview = new System.Windows.Forms.TextBox();
-            this.button_info = new System.Windows.Forms.Button();
-            this.button_write_hex = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             this.label_time_elapsed = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button_write_hex = new System.Windows.Forms.Button();
+            this.textBox_hex_preview = new System.Windows.Forms.TextBox();
+            this.button_browse = new System.Windows.Forms.Button();
+            this.label_hex_name = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.richTextBox_log = new System.Windows.Forms.RichTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label_current_address = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label_hex_version = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.splitContainer_main.Panel1.SuspendLayout();
             this.splitContainer_main.Panel2.SuspendLayout();
             this.splitContainer_main.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPage_eeprom.SuspendLayout();
+            this.panel_write_stamp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_mod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_week)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_year)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_address)).BeginInit();
-            this.panel_write_stamp.SuspendLayout();
             this.panel_read_stamp.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tabControl.SuspendLayout();
-            this.tabPage_eeprom.SuspendLayout();
             this.tabPage_flash.SuspendLayout();
             this.panel_flash.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_connection
@@ -176,15 +187,51 @@
             this.splitContainer_main.SplitterWidth = 1;
             this.splitContainer_main.TabIndex = 2;
             // 
-            // richTextBox_log
+            // tabControl
             // 
-            this.richTextBox_log.Location = new System.Drawing.Point(8, 9);
-            this.richTextBox_log.Name = "richTextBox_log";
-            this.richTextBox_log.ReadOnly = true;
-            this.richTextBox_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_log.Size = new System.Drawing.Size(440, 101);
-            this.richTextBox_log.TabIndex = 1;
-            this.richTextBox_log.Text = "";
+            this.tabControl.Controls.Add(this.tabPage_eeprom);
+            this.tabControl.Controls.Add(this.tabPage_flash);
+            this.tabControl.Location = new System.Drawing.Point(3, 3);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(456, 294);
+            this.tabControl.TabIndex = 5;
+            // 
+            // tabPage_eeprom
+            // 
+            this.tabPage_eeprom.Controls.Add(this.panel_write_stamp);
+            this.tabPage_eeprom.Controls.Add(this.panel_read_stamp);
+            this.tabPage_eeprom.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_eeprom.Name = "tabPage_eeprom";
+            this.tabPage_eeprom.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_eeprom.Size = new System.Drawing.Size(448, 268);
+            this.tabPage_eeprom.TabIndex = 0;
+            this.tabPage_eeprom.Text = "Write / read stamp (eeprom)";
+            this.tabPage_eeprom.UseVisualStyleBackColor = true;
+            // 
+            // panel_write_stamp
+            // 
+            this.panel_write_stamp.BackColor = System.Drawing.Color.Khaki;
+            this.panel_write_stamp.Controls.Add(this.numericUpDown_mod);
+            this.panel_write_stamp.Controls.Add(this.label4);
+            this.panel_write_stamp.Controls.Add(this.checkBox_mod);
+            this.panel_write_stamp.Controls.Add(this.label1);
+            this.panel_write_stamp.Controls.Add(this.checkBox_inc);
+            this.panel_write_stamp.Controls.Add(this.label3);
+            this.panel_write_stamp.Controls.Add(this.button_write);
+            this.panel_write_stamp.Controls.Add(this.label5);
+            this.panel_write_stamp.Controls.Add(this.numericUpDown_sn);
+            this.panel_write_stamp.Controls.Add(this.label6);
+            this.panel_write_stamp.Controls.Add(this.numericUpDown_week);
+            this.panel_write_stamp.Controls.Add(this.label7);
+            this.panel_write_stamp.Controls.Add(this.numericUpDown_year);
+            this.panel_write_stamp.Controls.Add(this.comboBox_type);
+            this.panel_write_stamp.Controls.Add(this.numericUpDown_address);
+            this.panel_write_stamp.Location = new System.Drawing.Point(0, 3);
+            this.panel_write_stamp.Margin = new System.Windows.Forms.Padding(0);
+            this.panel_write_stamp.Name = "panel_write_stamp";
+            this.panel_write_stamp.Size = new System.Drawing.Size(223, 262);
+            this.panel_write_stamp.TabIndex = 2;
             // 
             // numericUpDown_mod
             // 
@@ -208,6 +255,16 @@
             0,
             0});
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(63, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Address";
+            // 
             // checkBox_mod
             // 
             this.checkBox_mod.AutoSize = true;
@@ -217,6 +274,16 @@
             this.checkBox_mod.TabIndex = 14;
             this.checkBox_mod.Text = "Mod";
             this.checkBox_mod.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(14, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Write stamp";
             // 
             // checkBox_inc
             // 
@@ -228,15 +295,35 @@
             this.checkBox_inc.Text = "Increment";
             this.checkBox_inc.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(11, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Type of hardware";
+            // 
             // button_write
             // 
-            this.button_write.Location = new System.Drawing.Point(21, 206);
+            this.button_write.Location = new System.Drawing.Point(15, 236);
             this.button_write.Name = "button_write";
             this.button_write.Size = new System.Drawing.Size(181, 23);
             this.button_write.TabIndex = 12;
             this.button_write.Text = "Write";
             this.button_write.UseVisualStyleBackColor = true;
             this.button_write.Click += new System.EventHandler(this.button_write_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(86, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Year";
             // 
             // numericUpDown_sn
             // 
@@ -260,6 +347,16 @@
             0,
             0});
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(79, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 19);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Week";
+            // 
             // numericUpDown_week
             // 
             this.numericUpDown_week.Location = new System.Drawing.Point(128, 121);
@@ -282,6 +379,16 @@
             0,
             0});
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(81, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 19);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Serial";
+            // 
             // numericUpDown_year
             // 
             this.numericUpDown_year.Location = new System.Drawing.Point(128, 93);
@@ -298,6 +405,19 @@
             0,
             0,
             0});
+            // 
+            // comboBox_type
+            // 
+            this.comboBox_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_type.FormattingEnabled = true;
+            this.comboBox_type.Items.AddRange(new object[] {
+            "master (0)",
+            "door (1)",
+            "led (2)"});
+            this.comboBox_type.Location = new System.Drawing.Point(127, 38);
+            this.comboBox_type.Name = "comboBox_type";
+            this.comboBox_type.Size = new System.Drawing.Size(81, 21);
+            this.comboBox_type.TabIndex = 7;
             // 
             // numericUpDown_address
             // 
@@ -321,78 +441,28 @@
             0,
             0});
             // 
-            // comboBox_type
+            // panel_read_stamp
             // 
-            this.comboBox_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_type.FormattingEnabled = true;
-            this.comboBox_type.Items.AddRange(new object[] {
-            "master (0)",
-            "door (1)",
-            "led (2)"});
-            this.comboBox_type.Location = new System.Drawing.Point(127, 38);
-            this.comboBox_type.Name = "comboBox_type";
-            this.comboBox_type.Size = new System.Drawing.Size(81, 21);
-            this.comboBox_type.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(81, 152);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 19);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Serial";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(79, 124);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 19);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Week";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(86, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Year";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(63, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Address";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(11, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Type of hardware";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(14, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Write stamp";
+            this.panel_read_stamp.BackColor = System.Drawing.Color.DarkKhaki;
+            this.panel_read_stamp.Controls.Add(this.label_hex_version);
+            this.panel_read_stamp.Controls.Add(this.label20);
+            this.panel_read_stamp.Controls.Add(this.label_sn);
+            this.panel_read_stamp.Controls.Add(this.label12);
+            this.panel_read_stamp.Controls.Add(this.label_week);
+            this.panel_read_stamp.Controls.Add(this.label2);
+            this.panel_read_stamp.Controls.Add(this.label_year);
+            this.panel_read_stamp.Controls.Add(this.label11);
+            this.panel_read_stamp.Controls.Add(this.label_address);
+            this.panel_read_stamp.Controls.Add(this.label10);
+            this.panel_read_stamp.Controls.Add(this.label_type);
+            this.panel_read_stamp.Controls.Add(this.label9);
+            this.panel_read_stamp.Controls.Add(this.button_read);
+            this.panel_read_stamp.Controls.Add(this.label8);
+            this.panel_read_stamp.Location = new System.Drawing.Point(224, 3);
+            this.panel_read_stamp.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            this.panel_read_stamp.Name = "panel_read_stamp";
+            this.panel_read_stamp.Size = new System.Drawing.Size(220, 262);
+            this.panel_read_stamp.TabIndex = 3;
             // 
             // label_sn
             // 
@@ -404,6 +474,16 @@
             this.label_sn.TabIndex = 18;
             this.label_sn.Text = "----";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.Location = new System.Drawing.Point(14, 38);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 19);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Type of hardware";
+            // 
             // label_week
             // 
             this.label_week.AutoSize = true;
@@ -413,6 +493,16 @@
             this.label_week.Size = new System.Drawing.Size(33, 19);
             this.label_week.TabIndex = 17;
             this.label_week.Text = "----";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(14, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Read stamp";
             // 
             // label_year
             // 
@@ -424,6 +514,16 @@
             this.label_year.TabIndex = 16;
             this.label_year.Text = "----";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(67, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 19);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Address";
+            // 
             // label_address
             // 
             this.label_address.AutoSize = true;
@@ -433,6 +533,16 @@
             this.label_address.Size = new System.Drawing.Size(33, 19);
             this.label_address.TabIndex = 15;
             this.label_address.Text = "----";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(89, 96);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(36, 19);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Year";
             // 
             // label_type
             // 
@@ -444,9 +554,19 @@
             this.label_type.TabIndex = 14;
             this.label_type.Text = "----";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.Location = new System.Drawing.Point(82, 124);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 19);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Week";
+            // 
             // button_read
             // 
-            this.button_read.Location = new System.Drawing.Point(18, 206);
+            this.button_read.Location = new System.Drawing.Point(18, 236);
             this.button_read.Name = "button_read";
             this.button_read.Size = new System.Drawing.Size(181, 23);
             this.button_read.TabIndex = 13;
@@ -464,135 +584,6 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Serial";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.Location = new System.Drawing.Point(82, 124);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 19);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Week";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(86, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 19);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Year";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label11.Location = new System.Drawing.Point(67, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 19);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Address";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.Location = new System.Drawing.Point(14, 38);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 19);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Type of hardware";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(14, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Read stamp";
-            // 
-            // panel_write_stamp
-            // 
-            this.panel_write_stamp.BackColor = System.Drawing.Color.Khaki;
-            this.panel_write_stamp.Controls.Add(this.numericUpDown_mod);
-            this.panel_write_stamp.Controls.Add(this.label4);
-            this.panel_write_stamp.Controls.Add(this.checkBox_mod);
-            this.panel_write_stamp.Controls.Add(this.label1);
-            this.panel_write_stamp.Controls.Add(this.checkBox_inc);
-            this.panel_write_stamp.Controls.Add(this.label3);
-            this.panel_write_stamp.Controls.Add(this.button_write);
-            this.panel_write_stamp.Controls.Add(this.label5);
-            this.panel_write_stamp.Controls.Add(this.numericUpDown_sn);
-            this.panel_write_stamp.Controls.Add(this.label6);
-            this.panel_write_stamp.Controls.Add(this.numericUpDown_week);
-            this.panel_write_stamp.Controls.Add(this.label7);
-            this.panel_write_stamp.Controls.Add(this.numericUpDown_year);
-            this.panel_write_stamp.Controls.Add(this.comboBox_type);
-            this.panel_write_stamp.Controls.Add(this.numericUpDown_address);
-            this.panel_write_stamp.Location = new System.Drawing.Point(3, 5);
-            this.panel_write_stamp.Margin = new System.Windows.Forms.Padding(0);
-            this.panel_write_stamp.Name = "panel_write_stamp";
-            this.panel_write_stamp.Size = new System.Drawing.Size(220, 240);
-            this.panel_write_stamp.TabIndex = 2;
-            // 
-            // panel_read_stamp
-            // 
-            this.panel_read_stamp.BackColor = System.Drawing.Color.DarkKhaki;
-            this.panel_read_stamp.Controls.Add(this.label_sn);
-            this.panel_read_stamp.Controls.Add(this.label12);
-            this.panel_read_stamp.Controls.Add(this.label_week);
-            this.panel_read_stamp.Controls.Add(this.label2);
-            this.panel_read_stamp.Controls.Add(this.label_year);
-            this.panel_read_stamp.Controls.Add(this.label11);
-            this.panel_read_stamp.Controls.Add(this.label_address);
-            this.panel_read_stamp.Controls.Add(this.label10);
-            this.panel_read_stamp.Controls.Add(this.label_type);
-            this.panel_read_stamp.Controls.Add(this.label9);
-            this.panel_read_stamp.Controls.Add(this.button_read);
-            this.panel_read_stamp.Controls.Add(this.label8);
-            this.panel_read_stamp.Location = new System.Drawing.Point(224, 5);
-            this.panel_read_stamp.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.panel_read_stamp.Name = "panel_read_stamp";
-            this.panel_read_stamp.Size = new System.Drawing.Size(220, 240);
-            this.panel_read_stamp.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlText;
-            this.panel3.Controls.Add(this.richTextBox_log);
-            this.panel3.Location = new System.Drawing.Point(3, 301);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5);
-            this.panel3.Size = new System.Drawing.Size(456, 118);
-            this.panel3.TabIndex = 4;
-            // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.tabPage_eeprom);
-            this.tabControl.Controls.Add(this.tabPage_flash);
-            this.tabControl.Enabled = false;
-            this.tabControl.Location = new System.Drawing.Point(3, 3);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(456, 294);
-            this.tabControl.TabIndex = 5;
-            // 
-            // tabPage_eeprom
-            // 
-            this.tabPage_eeprom.Controls.Add(this.panel_write_stamp);
-            this.tabPage_eeprom.Controls.Add(this.panel_read_stamp);
-            this.tabPage_eeprom.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_eeprom.Name = "tabPage_eeprom";
-            this.tabPage_eeprom.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_eeprom.Size = new System.Drawing.Size(448, 268);
-            this.tabPage_eeprom.TabIndex = 0;
-            this.tabPage_eeprom.Text = "Write / read stamp (eeprom)";
-            this.tabPage_eeprom.UseVisualStyleBackColor = true;
-            // 
             // tabPage_flash
             // 
             this.tabPage_flash.Controls.Add(this.panel_flash);
@@ -607,98 +598,228 @@
             // panel_flash
             // 
             this.panel_flash.BackColor = System.Drawing.Color.Red;
+            this.panel_flash.Controls.Add(this.label_current_address);
+            this.panel_flash.Controls.Add(this.label19);
+            this.panel_flash.Controls.Add(this.label17);
+            this.panel_flash.Controls.Add(this.numericUpDown2);
+            this.panel_flash.Controls.Add(this.label16);
+            this.panel_flash.Controls.Add(this.numericUpDown1);
+            this.panel_flash.Controls.Add(this.label15);
             this.panel_flash.Controls.Add(this.label_time_elapsed);
             this.panel_flash.Controls.Add(this.label14);
             this.panel_flash.Controls.Add(this.button_write_hex);
-            this.panel_flash.Controls.Add(this.button_info);
             this.panel_flash.Controls.Add(this.textBox_hex_preview);
             this.panel_flash.Controls.Add(this.button_browse);
             this.panel_flash.Controls.Add(this.label_hex_name);
             this.panel_flash.Controls.Add(this.label13);
-            this.panel_flash.Location = new System.Drawing.Point(4, 3);
+            this.panel_flash.Location = new System.Drawing.Point(0, 3);
             this.panel_flash.Margin = new System.Windows.Forms.Padding(0);
             this.panel_flash.Name = "panel_flash";
             this.panel_flash.Padding = new System.Windows.Forms.Padding(3);
-            this.panel_flash.Size = new System.Drawing.Size(440, 262);
+            this.panel_flash.Size = new System.Drawing.Size(444, 262);
             this.panel_flash.TabIndex = 0;
             // 
-            // label13
+            // label17
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(41, 11);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Hex file:";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label17.Location = new System.Drawing.Point(14, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(165, 21);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Write main program";
             // 
-            // label_hex_name
+            // numericUpDown2
             // 
-            this.label_hex_name.AutoSize = true;
-            this.label_hex_name.ForeColor = System.Drawing.Color.White;
-            this.label_hex_name.Location = new System.Drawing.Point(89, 11);
-            this.label_hex_name.Name = "label_hex_name";
-            this.label_hex_name.Size = new System.Drawing.Size(23, 13);
-            this.label_hex_name.TabIndex = 1;
-            this.label_hex_name.Text = "----";
+            this.numericUpDown2.Location = new System.Drawing.Point(88, 207);
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(42, 22);
+            this.numericUpDown2.TabIndex = 11;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // button_browse
+            // label16
             // 
-            this.button_browse.Location = new System.Drawing.Point(6, 6);
-            this.button_browse.Name = "button_browse";
-            this.button_browse.Size = new System.Drawing.Size(29, 23);
-            this.button_browse.TabIndex = 2;
-            this.button_browse.Text = "...";
-            this.button_browse.UseVisualStyleBackColor = true;
-            this.button_browse.Click += new System.EventHandler(this.button_browse_Click);
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(12, 209);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(73, 13);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Last address:";
             // 
-            // textBox_hex_preview
+            // numericUpDown1
             // 
-            this.textBox_hex_preview.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox_hex_preview.Location = new System.Drawing.Point(6, 35);
-            this.textBox_hex_preview.Multiline = true;
-            this.textBox_hex_preview.Name = "textBox_hex_preview";
-            this.textBox_hex_preview.ReadOnly = true;
-            this.textBox_hex_preview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_hex_preview.Size = new System.Drawing.Size(428, 171);
-            this.textBox_hex_preview.TabIndex = 3;
+            this.numericUpDown1.Location = new System.Drawing.Point(88, 184);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(42, 22);
+            this.numericUpDown1.TabIndex = 9;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // button_info
+            // label15
             // 
-            this.button_info.Location = new System.Drawing.Point(359, 212);
-            this.button_info.Name = "button_info";
-            this.button_info.Size = new System.Drawing.Size(75, 23);
-            this.button_info.TabIndex = 4;
-            this.button_info.Text = "Info";
-            this.button_info.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 186);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "First address:";
             // 
-            // button_write_hex
+            // label_time_elapsed
             // 
-            this.button_write_hex.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_write_hex.Location = new System.Drawing.Point(6, 212);
-            this.button_write_hex.Name = "button_write_hex";
-            this.button_write_hex.Size = new System.Drawing.Size(347, 23);
-            this.button_write_hex.TabIndex = 5;
-            this.button_write_hex.Text = "Write hex to microcontroller";
-            this.button_write_hex.UseVisualStyleBackColor = true;
+            this.label_time_elapsed.AutoSize = true;
+            this.label_time_elapsed.Location = new System.Drawing.Point(301, 209);
+            this.label_time_elapsed.Name = "label_time_elapsed";
+            this.label_time_elapsed.Size = new System.Drawing.Size(23, 13);
+            this.label_time_elapsed.TabIndex = 7;
+            this.label_time_elapsed.Text = "----";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(7, 242);
+            this.label14.Location = new System.Drawing.Point(203, 209);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(76, 13);
             this.label14.TabIndex = 6;
             this.label14.Text = "Time elapsed:";
             // 
-            // label_time_elapsed
+            // button_write_hex
             // 
-            this.label_time_elapsed.AutoSize = true;
-            this.label_time_elapsed.Location = new System.Drawing.Point(89, 242);
-            this.label_time_elapsed.Name = "label_time_elapsed";
-            this.label_time_elapsed.Size = new System.Drawing.Size(23, 13);
-            this.label_time_elapsed.TabIndex = 7;
-            this.label_time_elapsed.Text = "----";
+            this.button_write_hex.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_write_hex.Location = new System.Drawing.Point(136, 184);
+            this.button_write_hex.Name = "button_write_hex";
+            this.button_write_hex.Size = new System.Drawing.Size(61, 45);
+            this.button_write_hex.TabIndex = 5;
+            this.button_write_hex.Text = "Start!";
+            this.button_write_hex.UseVisualStyleBackColor = true;
+            // 
+            // textBox_hex_preview
+            // 
+            this.textBox_hex_preview.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_hex_preview.Location = new System.Drawing.Point(5, 61);
+            this.textBox_hex_preview.Multiline = true;
+            this.textBox_hex_preview.Name = "textBox_hex_preview";
+            this.textBox_hex_preview.ReadOnly = true;
+            this.textBox_hex_preview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox_hex_preview.Size = new System.Drawing.Size(433, 117);
+            this.textBox_hex_preview.TabIndex = 3;
+            // 
+            // button_browse
+            // 
+            this.button_browse.Location = new System.Drawing.Point(5, 32);
+            this.button_browse.Name = "button_browse";
+            this.button_browse.Size = new System.Drawing.Size(53, 23);
+            this.button_browse.TabIndex = 2;
+            this.button_browse.Text = "Browse";
+            this.button_browse.UseVisualStyleBackColor = true;
+            this.button_browse.Click += new System.EventHandler(this.button_browse_Click);
+            // 
+            // label_hex_name
+            // 
+            this.label_hex_name.AutoSize = true;
+            this.label_hex_name.ForeColor = System.Drawing.Color.White;
+            this.label_hex_name.Location = new System.Drawing.Point(117, 37);
+            this.label_hex_name.Name = "label_hex_name";
+            this.label_hex_name.Size = new System.Drawing.Size(23, 13);
+            this.label_hex_name.TabIndex = 1;
+            this.label_hex_name.Text = "----";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(64, 37);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 13);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Hex file:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.richTextBox_log);
+            this.panel3.Location = new System.Drawing.Point(3, 301);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(5);
+            this.panel3.Size = new System.Drawing.Size(456, 118);
+            this.panel3.TabIndex = 4;
+            // 
+            // richTextBox_log
+            // 
+            this.richTextBox_log.Location = new System.Drawing.Point(8, 29);
+            this.richTextBox_log.Name = "richTextBox_log";
+            this.richTextBox_log.ReadOnly = true;
+            this.richTextBox_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_log.Size = new System.Drawing.Size(440, 81);
+            this.richTextBox_log.TabIndex = 1;
+            this.richTextBox_log.Text = "";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(5, 5);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(108, 21);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Log raw data";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(203, 186);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 13);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "Current address:";
+            // 
+            // label_current_address
+            // 
+            this.label_current_address.AutoSize = true;
+            this.label_current_address.Location = new System.Drawing.Point(301, 186);
+            this.label_current_address.Name = "label_current_address";
+            this.label_current_address.Size = new System.Drawing.Size(23, 13);
+            this.label_current_address.TabIndex = 14;
+            this.label_current_address.Text = "----";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label20.Location = new System.Drawing.Point(49, 181);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(80, 19);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "Hex version";
+            // 
+            // label_hex_version
+            // 
+            this.label_hex_version.AutoSize = true;
+            this.label_hex_version.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_hex_version.Location = new System.Drawing.Point(135, 181);
+            this.label_hex_version.Name = "label_hex_version";
+            this.label_hex_version.Size = new System.Drawing.Size(33, 19);
+            this.label_hex_version.TabIndex = 20;
+            this.label_hex_version.Text = "----";
             // 
             // MainForm
             // 
@@ -717,21 +838,24 @@
             this.splitContainer_main.Panel1.ResumeLayout(false);
             this.splitContainer_main.Panel2.ResumeLayout(false);
             this.splitContainer_main.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.tabPage_eeprom.ResumeLayout(false);
+            this.panel_write_stamp.ResumeLayout(false);
+            this.panel_write_stamp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_mod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_week)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_year)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_address)).EndInit();
-            this.panel_write_stamp.ResumeLayout(false);
-            this.panel_write_stamp.PerformLayout();
             this.panel_read_stamp.ResumeLayout(false);
             this.panel_read_stamp.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.tabControl.ResumeLayout(false);
-            this.tabPage_eeprom.ResumeLayout(false);
             this.tabPage_flash.ResumeLayout(false);
             this.panel_flash.ResumeLayout(false);
             this.panel_flash.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,10 +908,19 @@
         private System.Windows.Forms.Label label_hex_name;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button_write_hex;
-        private System.Windows.Forms.Button button_info;
         private System.Windows.Forms.TextBox textBox_hex_preview;
         private System.Windows.Forms.Label label_time_elapsed;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label_current_address;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label_hex_version;
+        private System.Windows.Forms.Label label20;
     }
 }
 
