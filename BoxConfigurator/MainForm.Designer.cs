@@ -55,6 +55,8 @@
             this.comboBox_type = new System.Windows.Forms.ComboBox();
             this.numericUpDown_address = new System.Windows.Forms.NumericUpDown();
             this.panel_read_stamp = new System.Windows.Forms.Panel();
+            this.label_hex_version = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label_sn = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label_week = new System.Windows.Forms.Label();
@@ -69,6 +71,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage_flash = new System.Windows.Forms.TabPage();
             this.panel_flash = new System.Windows.Forms.Panel();
+            this.label_current_address = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
@@ -82,12 +86,8 @@
             this.label_hex_name = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.richTextBox_log = new System.Windows.Forms.RichTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label_current_address = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label_hex_version = new System.Windows.Forms.Label();
+            this.richTextBox_log = new System.Windows.Forms.RichTextBox();
             this.statusStrip.SuspendLayout();
             this.splitContainer_main.Panel1.SuspendLayout();
             this.splitContainer_main.Panel2.SuspendLayout();
@@ -191,6 +191,7 @@
             // 
             this.tabControl.Controls.Add(this.tabPage_eeprom);
             this.tabControl.Controls.Add(this.tabPage_flash);
+            this.tabControl.Enabled = false;
             this.tabControl.Location = new System.Drawing.Point(3, 3);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -464,6 +465,26 @@
             this.panel_read_stamp.Size = new System.Drawing.Size(220, 262);
             this.panel_read_stamp.TabIndex = 3;
             // 
+            // label_hex_version
+            // 
+            this.label_hex_version.AutoSize = true;
+            this.label_hex_version.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_hex_version.Location = new System.Drawing.Point(135, 181);
+            this.label_hex_version.Name = "label_hex_version";
+            this.label_hex_version.Size = new System.Drawing.Size(33, 19);
+            this.label_hex_version.TabIndex = 20;
+            this.label_hex_version.Text = "----";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label20.Location = new System.Drawing.Point(49, 181);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(80, 19);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "Hex version";
+            // 
             // label_sn
             // 
             this.label_sn.AutoSize = true;
@@ -619,6 +640,24 @@
             this.panel_flash.Size = new System.Drawing.Size(444, 262);
             this.panel_flash.TabIndex = 0;
             // 
+            // label_current_address
+            // 
+            this.label_current_address.AutoSize = true;
+            this.label_current_address.Location = new System.Drawing.Point(301, 186);
+            this.label_current_address.Name = "label_current_address";
+            this.label_current_address.Size = new System.Drawing.Size(23, 13);
+            this.label_current_address.TabIndex = 14;
+            this.label_current_address.Text = "----";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(203, 186);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 13);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "Current address:";
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -762,16 +801,6 @@
             this.panel3.Size = new System.Drawing.Size(456, 118);
             this.panel3.TabIndex = 4;
             // 
-            // richTextBox_log
-            // 
-            this.richTextBox_log.Location = new System.Drawing.Point(8, 29);
-            this.richTextBox_log.Name = "richTextBox_log";
-            this.richTextBox_log.ReadOnly = true;
-            this.richTextBox_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox_log.Size = new System.Drawing.Size(440, 81);
-            this.richTextBox_log.TabIndex = 1;
-            this.richTextBox_log.Text = "";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -783,43 +812,15 @@
             this.label18.TabIndex = 2;
             this.label18.Text = "Log raw data";
             // 
-            // label19
+            // richTextBox_log
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(203, 186);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 13);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "Current address:";
-            // 
-            // label_current_address
-            // 
-            this.label_current_address.AutoSize = true;
-            this.label_current_address.Location = new System.Drawing.Point(301, 186);
-            this.label_current_address.Name = "label_current_address";
-            this.label_current_address.Size = new System.Drawing.Size(23, 13);
-            this.label_current_address.TabIndex = 14;
-            this.label_current_address.Text = "----";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label20.Location = new System.Drawing.Point(49, 181);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 19);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "Hex version";
-            // 
-            // label_hex_version
-            // 
-            this.label_hex_version.AutoSize = true;
-            this.label_hex_version.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_hex_version.Location = new System.Drawing.Point(135, 181);
-            this.label_hex_version.Name = "label_hex_version";
-            this.label_hex_version.Size = new System.Drawing.Size(33, 19);
-            this.label_hex_version.TabIndex = 20;
-            this.label_hex_version.Text = "----";
+            this.richTextBox_log.Location = new System.Drawing.Point(8, 29);
+            this.richTextBox_log.Name = "richTextBox_log";
+            this.richTextBox_log.ReadOnly = true;
+            this.richTextBox_log.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox_log.Size = new System.Drawing.Size(440, 81);
+            this.richTextBox_log.TabIndex = 1;
+            this.richTextBox_log.Text = "";
             // 
             // MainForm
             // 

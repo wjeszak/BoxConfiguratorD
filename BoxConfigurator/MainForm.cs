@@ -122,12 +122,17 @@ namespace BoxConfigurator
                     //PortStatusInfo(PortStatus.Busy);
                 }
 
-                if (serial.IsOpen == true) PortStatusInfo(PortStatus.Connected);
+                if (serial.IsOpen == true)
+                {
+                    PortStatusInfo(PortStatus.Connected);
+                    tabControl.Enabled = true;
+                }
             }
             else
             {
                 serial.Close();
                 PortStatusInfo(PortStatus.Disconnected);
+                tabControl.Enabled = false;
             }
         }
 
