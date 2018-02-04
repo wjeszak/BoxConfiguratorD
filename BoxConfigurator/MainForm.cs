@@ -229,8 +229,8 @@ namespace BoxConfigurator
             SendToPort(frame, 9);
             if (checkBox_inc.Checked == true)
             {
-                numericUpDown_address.Value++;
-                numericUpDown_sn.Value++;
+                //numericUpDown_address.Value++;
+                //numericUpDown_sn.Value++;
             }
             if (checkBox_mod.Checked == true && numericUpDown_address.Value % (numericUpDown_mod.Value + 1) == 0)
                 numericUpDown_address.Value = 1;

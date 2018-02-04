@@ -328,6 +328,7 @@
             // 
             // numericUpDown_sn
             // 
+            this.numericUpDown_sn.Enabled = false;
             this.numericUpDown_sn.Location = new System.Drawing.Point(128, 149);
             this.numericUpDown_sn.Maximum = new decimal(new int[] {
             999,
@@ -343,7 +344,7 @@
             this.numericUpDown_sn.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_sn.TabIndex = 11;
             this.numericUpDown_sn.Value = new decimal(new int[] {
-            1,
+            254,
             0,
             0,
             0});
@@ -360,9 +361,10 @@
             // 
             // numericUpDown_week
             // 
+            this.numericUpDown_week.Enabled = false;
             this.numericUpDown_week.Location = new System.Drawing.Point(128, 121);
             this.numericUpDown_week.Maximum = new decimal(new int[] {
-            53,
+            255,
             0,
             0,
             0});
@@ -375,7 +377,7 @@
             this.numericUpDown_week.Size = new System.Drawing.Size(81, 22);
             this.numericUpDown_week.TabIndex = 10;
             this.numericUpDown_week.Value = new decimal(new int[] {
-            1,
+            254,
             0,
             0,
             0});
@@ -392,7 +394,13 @@
             // 
             // numericUpDown_year
             // 
+            this.numericUpDown_year.Enabled = false;
             this.numericUpDown_year.Location = new System.Drawing.Point(128, 93);
+            this.numericUpDown_year.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
             this.numericUpDown_year.Minimum = new decimal(new int[] {
             18,
             0,
@@ -402,7 +410,7 @@
             this.numericUpDown_year.Size = new System.Drawing.Size(80, 22);
             this.numericUpDown_year.TabIndex = 9;
             this.numericUpDown_year.Value = new decimal(new int[] {
-            18,
+            254,
             0,
             0,
             0});
@@ -410,6 +418,7 @@
             // comboBox_type
             // 
             this.comboBox_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_type.Enabled = false;
             this.comboBox_type.FormattingEnabled = true;
             this.comboBox_type.Items.AddRange(new object[] {
             "master (0)",
@@ -833,7 +842,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
-            this.Text = "Box Configurator";
+            this.Text = "Box Configurator (Limited)";
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.splitContainer_main.Panel1.ResumeLayout(false);
