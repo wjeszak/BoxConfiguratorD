@@ -44,7 +44,6 @@ namespace BoxConfigurator
                     statusStrip_connection.Text = "Connected @ " + comboBox_baudrate.SelectedItem.ToString() + " bps";
                     tabControl.Enabled = true;
                     break;
-
                 case PortStatus.Disconnected:
                     button_connection.Text = "Connect";
                     statusStrip_connection.Text = "Disconected";
